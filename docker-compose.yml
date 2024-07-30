@@ -1,0 +1,32 @@
+version: '3.3'
+services:
+  web:
+    container_name: php-7.4
+    build:
+          context: ./
+          dockerfile: ./php.Dockerfile
+    volumes:
+      - ./:/var/www/html/
+    ports:
+      - 8000:80
+
+  mysql:
+      container_name: mysql-5.6
+      image: mysql:5.6.35
+      restart: 'no'
+      tty: true
+      environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: mudrock
+        MYSQL_USER: root
+        MYSQL_PASSWORD:
+      ports:
+        - 3306:3306
+      expose:
+        - 3306
+      volumes:
+        - mysql:/var/lib/mysql
+
+volumes:
+  mysql:
+  html:
