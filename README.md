@@ -13,6 +13,7 @@
 
 - [Requirements](#requirements)
 - [How to run](#how-to-run)
+- [Example](#example)
     
 <br />
 
@@ -33,3 +34,7 @@ composer install && docker-compose up -d
 - Now open your browser and access the URL: <br />
 [http://localhost:8000](http://localhost:8000)
 
+<br />
+
+## Example <a name = "example"></a>
+![alt text](public/example/image.png)
